@@ -1,3 +1,4 @@
+[![CI](https://github.com/Sparrow0hawk/spring-boot-polls/actions/workflows/ci.yml/badge.svg)](https://github.com/Sparrow0hawk/spring-boot-polls/actions/workflows/ci.yml)
 # Polls Spring Boot App
 
 ## Setup
