@@ -7,13 +7,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomePage {
-    @Value("${spring.application.name}")
-    String appName;
+  @Value("${spring.application.name}")
+  String appName;
 
-    @GetMapping(value = "/")
-    public String homePage(Model model)
-    {
-        model.addAttribute("appName", appName);
-        return "home";
-    }
+  @GetMapping(value = "/")
+  public String homePage(Model model) {
+    model.addAttribute("appName", appName);
+    return "home";
+  }
 }

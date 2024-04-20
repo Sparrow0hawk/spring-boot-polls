@@ -15,22 +15,22 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class TestHomePage {
 
-    @LocalServerPort
-    private int port;
+  @LocalServerPort
+  private int port;
 
-    @Test
-    public void testHomeShowsHelloWorld() {
-        try (Playwright playwright = Playwright.create()) {
-            Browser browser = playwright.chromium().launch();
-            Page page = browser.newPage();
-            page.navigate("http://localhost:" + port + "/");
+  @Test
+  public void testHomeShowsHelloWorld() {
+    try (Playwright playwright = Playwright.create()) {
+      Browser browser = playwright.chromium().launch();
+      Page page = browser.newPage();
+      page.navigate("http://localhost:" + port + "/");
 
-            Locator heading = page.getByRole(AriaRole.HEADING);
+      Locator heading = page.getByRole(AriaRole.HEADING);
 
-            assertEquals(heading.textContent(), "Hello world!");
-        }
-
+      assertEquals(heading.textContent(), "Hello world!");
     }
+
+  }
 
 
 }

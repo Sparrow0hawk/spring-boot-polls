@@ -15,16 +15,15 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 public class TestHomePage {
 
-    @Autowired
-    private MockMvc mockMvc;
+  @Autowired
+  private MockMvc mockMvc;
 
-    @Test
-    public void canGetHome() throws Exception
-    {
-        mockMvc.perform(get("/")).andExpectAll(
-                status().isOk(),
-                content().contentType("text/html;charset=UTF-8"),
-                content().xml("""
+  @Test
+  public void canGetHome() throws Exception {
+    mockMvc.perform(get("/")).andExpectAll(
+            status().isOk(),
+            content().contentType("text/html;charset=UTF-8"),
+            content().xml("""
                         <!DOCTYPE html>
                         <html lang="en">
                             <body>
@@ -32,8 +31,8 @@ public class TestHomePage {
                             </body>
                         </html>
                         """)
-        );
-    }
+    );
+  }
 
 
 }
