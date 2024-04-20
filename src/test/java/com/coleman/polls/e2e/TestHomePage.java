@@ -1,9 +1,8 @@
 package com.coleman.polls.e2e;
 
-import com.microsoft.playwright.Locator;
+import com.coleman.polls.e2e.pages.HomePage;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
-import com.microsoft.playwright.options.AriaRole;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
@@ -20,11 +19,9 @@ public class TestHomePage {
 
   @Test
   public void testHomeShowsHelloWorld(Page page) {
-    page.navigate("http://localhost:" + port + "/");
+    HomePage home_page = HomePage.open(page, port);
 
-    Locator heading = page.getByRole(AriaRole.HEADING);
-
-    assertEquals(heading.textContent(), "Hello world!");
+    assertEquals(home_page.heading(), "Hello world!");
   }
 
 }
