@@ -19,3 +19,8 @@ To use this project you will need:
    ```bash
    mvn test
    ```
+4. Run Checkstyle
+   ```bash
+   mvn site
+   ```
+   View the report by loading `./target/site/checkstyle.html` in your browser.
