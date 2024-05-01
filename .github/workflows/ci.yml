@@ -17,4 +17,4 @@ jobs:
           distribution: 'temurin'
 
       - name: Build
-        run: mvn verify
+        run: mvn --batch-mode verify
