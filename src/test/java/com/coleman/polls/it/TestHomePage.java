@@ -19,9 +19,9 @@ public class TestHomePage {
 
   @Test
   public void canGetHome() throws Exception {
-    HomePage home_page = HomePage.open(mockMvc);
+    HomePage homePage = HomePage.open(mockMvc);
 
-    assertEquals(home_page.heading, "Hello world!");
+    assertEquals(homePage.heading, "Hello world!");
   }
 
 

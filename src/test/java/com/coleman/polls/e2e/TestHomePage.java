@@ -19,9 +19,9 @@ public class TestHomePage {
 
   @Test
   public void testHomeShowsHelloWorld(Page page) {
-    HomePage home_page = HomePage.open(page, port);
+    HomePage homePage = HomePage.open(page, port);
 
-    assertEquals(home_page.heading(), "Hello world!");
+    assertEquals(homePage.heading(), "Hello world!");
   }
 
 }
