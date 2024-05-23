@@ -15,11 +15,26 @@ To use this project you will need:
    ```bash
    mvn spring-boot:run
    ```
-3. Run tests
+3. Load some questions with cURL
+   ```bash
+   curl --json \
+        '[
+          {
+            "id": 1,
+            "text": "What is your favourite colour?"
+          },
+          {
+            "id": 2,
+            "text": "Who framed Roger Rabbit?"
+          }
+          ]' \
+          http://127.0.0.1:8081/
+   ```
+4. Run tests
    ```bash
    mvn test
    ```
-4. Run Checkstyle
+5. Run Checkstyle
    ```bash
    mvn site
    ```
